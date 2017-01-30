@@ -1,0 +1,22 @@
+<% var title = 'Formulaire login' %>
+<% include head %>
+
+<h1>Login</h1>
+<fieldset id="inputz">
+Accés au <a href="/profile">profil</a>
+<br/><br/>
+<form method="post" action="/login">
+  <label for="Username">Username :</label>
+  <input type="email" name="username" id="email" autofocus required placeholder="name@something.com"/>
+  <span class="form_hint">Format attendu "name@something.com"</span>
+  <label for="mdp1">Password :</label>
+  <input type="password" name="password" id="mdp1" required placeholder="password" pattern="\w{6,8}"/>
+  <span class="form_hint">De 6 à 8 caractères alphanumériques.</span>
+  </fieldset>
+  <fieldset id="actionz">
+  <input type="submit" value="Login">
+  <input type="button" id="retour" onclick="window.location='/inscription';" value="Inscription"/>
+    </fieldset>
+</form>
+
+<% include foot %>

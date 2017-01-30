@@ -1,0 +1,13 @@
+<% var title = 'Page de reponse pictionnary' %>
+<% include head %>
+
+<h1>Pictionnary</h1>
+
+<div><img src=<%=image%>>
+    <form method="post" action="/reponse" name="pictionnary">
+        <input type="text" placeholder="reponse" name="reponse" id="reponse">
+        <input type="submit">
+    </form>
+</div>
+
+<% include foot %>

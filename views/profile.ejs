@@ -1,0 +1,21 @@
+<% var title = 'Page de profil' %>
+<% include head %>
+
+<h1>Votre Profil</h1><br>
+
+Bonjour <%=prenom%> <%=nom%>
+<br/><br/>
+<img src=<%=photo%> height="60" width="60">
+<br/><br/>
+<input type="button" id="paint" onclick="window.location='/paint';" value="Peindre"/>
+<input type="button" id="modifProfil" onclick="window.location='/modificationInfo';" value="Modifier profil"/>
+<input type="button" id="deconnexion" onclick="window.location='/deconnexion';" value="Deconnecter"/>
+
+
+<div>
+    <% for(var i = 0 ; i < result.length ; i++) { %>
+    <a href="/reponse?id=<%=result[i].id%>"><img src=<%= result[i].images %> height="150" width="150"></a>
+    <% } %>
+</div>
+
+<% include foot %>
